@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 0 8px lightgray;
+  padding: 2rem;
+  max-width: 20rem;
+  height: 20rem;
+
+  .card-title {
+    font-size: 2rem;
+  }
+}

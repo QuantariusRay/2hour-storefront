@@ -1,0 +1,9 @@
+<h1>J.B. StoreFront</h1>
+
+<h2>View Our Available Products</h2>
+
+<div class="flex-row">
+  <ng-container *ngFor="let product of products$ | async">
+    <app-card class="flex-auto" [title]="product.name" (showDetails)="showDetails($event, product.id)"></app-card>
+  </ng-container>
+</div>
