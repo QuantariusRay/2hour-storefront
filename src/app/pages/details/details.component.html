@@ -1,0 +1,53 @@
+<div class="">
+  <h1>{{ item.name }}</h1>
+
+  <div class="form-container" [formGroup]="orderForm">
+
+    <div class="flex-row">
+      <div class="input-container">
+        <label for="quantity">Quantity</label>
+        <input spiffy type="number" formGroupName="quantity" id="quantity"/>
+      </div>
+    </div>
+
+    <h4 class="section-label">Shipping Information</h4>
+
+    <ng-container formGroupName="address">
+      <div class="flex-row">
+        <div class="input-container">
+          <label for="line1">Address Line 1</label>
+          <input spiffy formGroupName="line1" id="line1"/>
+        </div>
+      </div>
+
+      <div class="flex-row">
+        <div class="input-container">
+          <label for="line2">Address Line 2</label>
+          <input spiffy formGroupName="line2" id="line2"/>
+        </div>
+      </div>
+
+      <div class="flex-row address-block">
+        <div class="input-container flex">
+          <label for="city">City</label>
+          <input spiffy formGroupName="city" id="city"/>
+        </div>
+
+        <div class="input-container flex">
+          <label for="state">State</label>
+          <input spiffy formGroupName="state" id="state"/>
+        </div>
+
+        <div class="input-container flex">
+          <label for="zip">Zip Code</label>
+          <input spiffy formGroupName="zip" id="zip"/>
+        </div>
+      </div>
+    </ng-container>
+
+    <div class="action-row">
+      <button class="primary-button" (click)="addToCart()" [disabled]="orderForm.invalid">Add To Cart</button>
+    </div>
+
+  </div>
+</div>

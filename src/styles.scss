@@ -1,0 +1,60 @@
+body {
+  margin: 4rem;
+}
+
+input[spiffy] {
+  border: 1px solid darkgray;
+  padding: 1rem;
+}
+
+//** Buttons **//
+
+.action-button {
+  @extend .base-button;
+  color: blue;
+  background-color: white;
+}
+
+.primary-button {
+  @extend .base-button;
+  color: white;
+  background-color: blue;
+}
+
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex {
+  flex: 1;
+  flex-basis: 0.000000001px;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.base-button {
+  cursor: pointer;
+  border: 1px solid;
+  width: 100%;
+  padding: .5rem;
+  font-size: 1rem;
+
+  &[disabled] {
+    background-color: lightgray;
+    color: white;
+  }
+}
+
+.section-label {
+  color: gray;
+}
